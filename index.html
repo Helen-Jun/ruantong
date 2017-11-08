@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bootstrap - 简洁、直观、强悍、移动设备优先的前端开发框架，让web开发更迅速、简单。">
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="author" content="译者：王赛 &lt;wangsai@bootcss.com&gt;">
+
+<title>
+  
+    组件 · Bootstrap v3 中文文档
+  
+</title>
+<style type="text/css">
+    .tab__content {
+    padding: 10px 25px;
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    opacity: 0;
+    left: 0;
+    transform: translateY(-3px);
+    border-radius: 6px;
+}
+/* 首先让内容部分都不可见，不占据文档流。 */
+
+.tab:checked:nth-of-type(1) ~ .tab__content:nth-of-type(1),
+.tab:checked:nth-of-type(2) ~ .tab__content:nth-of-type(2),
+.tab:checked:nth-of-type(3) ~ .tab__content:nth-of-type(3) {
+    opacity: 1;
+    transition: 0.5s opacity ease-in, 0.8s transform ease;
+    position: relative;
+    top: 0;
+    z-index: 100;
+    transform: translateY(0px);
+    text-shadow: 0 0 0;
+}
+</style>
+</head>
+<body>
+    <div class="tab-wrap">
+  <!-- active tab on page load gets checked attribute -->
+  <input type="radio" id="tab1" name="tabGroup1" class="tab" checked> <!-- 设置一个默认状态 -->
+  <label for="tab1">Short</label>
+  <input type="radio" id="tab2" name="tabGroup1" class="tab">
+  <label for="tab2">Medium</label>
+  <input type="radio" id="tab3" name="tabGroup1" class="tab">
+  <label for="tab3">Long</label>
+  <div class="tab__content">
+    <h3>Short Section</h3>
+    <p>Praesent...</p>
+  </div>
+  <div class="tab__content">
+    <h3>Medium Section</h3>
+    <p>Praesent...</p>
+    <p>In...</p>
+  </div>
+  <div class="tab__content">
+    <h3>Long Section</h3>
+    <p>...</p>
+    <p>...</p>
+    <p>...</p>
+    <p>...</p>
+  </div>
+</div>
+</body>
+</html>
