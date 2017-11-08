@@ -1,0 +1,67 @@
+.sidr {
+    display: none;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    z-index: 999999;
+    width: 260px;
+    overflow-y: auto;
+    background: #f5f5f5;
+    box-shadow: inset 0 0 5px 5px #eee;
+}
+
+    .sidr .sidr-inner {
+        padding: 15px;
+    }
+
+        .sidr .sidr-inner > p {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+
+    .sidr.right {
+        left: auto;
+        right: -260px;
+    }
+
+    .sidr.left {
+        left: -260px;
+        right: auto;
+    }
+
+    .sidr ul {
+        padding: 0;
+    }
+
+        .sidr ul li {
+            display: block;
+            margin: 0;
+            border-top: 1px solid #ddd;
+        }
+
+            .sidr ul li a {
+                color: #555;
+                padding: 10px 15px;
+                display: block;
+                text-decoration: none;
+            }
+
+            .sidr ul li ul li {
+                font-size: 12px;
+            }
+
+                .sidr ul li ul li a {
+                    padding-left: 30px;
+                }
+
+    .sidr .arrow {
+        float: right;
+    }
+
+    .sidr .glyphicon.arrow:before {
+        content: "\e080";
+    }
+
+    .sidr ul li.active > a > .glyphicon.arrow:before {
+        content: "\e114";
+    }
